@@ -1,0 +1,44 @@
+body{
+    background: black;
+}
+.ripple{
+  width: 200px;
+  height: 200px;
+  margin: 200px auto;
+  position: relative;
+}
+.ripple div{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 6px solid rgb(111, 255, 0);
+  animation: ripple 2s cubic-bezier(.03,.54,.6,.63) infinite;
+  border-radius: 50%;
+}
+.ripple div:nth-child(2){
+  animation-delay: 0.5s;
+}
+
+@keyframes ripple {
+  0%{
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5%{
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5.1%{
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100%{
+    width: 88px;
+    height: 88px;
+    opacity: 0;
+  }
+}
